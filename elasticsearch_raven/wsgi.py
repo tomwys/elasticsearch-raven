@@ -1,11 +1,11 @@
 from queue import Queue
 from threading import Thread
 
-from elasticsearch_raven import config
+from elasticsearch_raven import configuration
 from elasticsearch_raven.transport import ElasticsearchTransport
 from elasticsearch_raven.transport import SentryMessage
 
-transport = ElasticsearchTransport(config.host, config.use_ssl)
+transport = ElasticsearchTransport(configuration.host, configuration.use_ssl)
 blocking_queue = Queue()
 
 
